@@ -1,13 +1,12 @@
 apiVersion: v1
 kind: Service
-  meta
-name: hello-service
+metadata:
+  name: hello-service
 spec:
   selector:
     app: hello
-  type: NodePort
   ports:
     - protocol: TCP
       port: 80
       targetPort: 8080
-      nodePort: 30080  # ← EC2의 <퍼블릭IP>:30080 으로 접속 가능
+  type: NodePort
