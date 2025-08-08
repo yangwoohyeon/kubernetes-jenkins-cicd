@@ -4,6 +4,7 @@ pipeline {
     environment {
         GIT_URL = "https://github.com/yangwoohyeon/kubernetes-jenkins-cicd.git"
         DOCKER_IMAGE = "yangwoohyeon/jenkins-pipeline:latest"
+        KUBECONFIG = "/var/lib/jenkins/.kube/config"
     }
 
     stages {
